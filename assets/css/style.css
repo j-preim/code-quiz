@@ -31,8 +31,27 @@ main {
     padding: 20px 0;
 }
 
+.buttons {
+    display: block;
+}
+
 button {
     color: white;
-    background-color: blueviolet;
+    background-color: rgb(92, 24, 129);
     border-radius: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(142, 71, 166);;
+}
+
+button:active {
+    border: 3px solid skyblue;
+}
+
+.highscores-header {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
 }

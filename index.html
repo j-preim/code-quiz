@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Code Quiz</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="info-bar">
-        <a id="view-scores" href="index.html">View Highscores</a>
-        <div id="timer">Time: 0</div>
+      <a class="view-scores" href="index.html">View Highscores</a>
+      <div class="timer-text">Time: 0</div>
     </header>
-    
+
     <main>
-    <div class="main-header">Coding Quiz Challenge</div>
-    <div class="main-content">Try to answer the following code-related questions within the time limit. 
-        Keep in mind that incorrect answers will penalize your score/time by ten seconds!</div>
-    <button class="start-quiz">Start Quiz</button>
-    <div class="question"></div>
-    <div class="choices"></div>
+      <div class="main-header">Coding Quiz Challenge</div>
+      <div class="main-content">
+        Try to answer the following code-related questions within the time
+        limit. Keep in mind that incorrect answers will penalize your score/time
+        by ten seconds!
+      </div>
+      <div class="buttons">
+        <button class="start-button">Start Quiz</button>
+      </div>
+
+      <div class="question-header" style="display: none"></div>
+      <div class="question-content" style="display: none"></div>
+
+      <div class="highscores-header" style="display: none">Highscores</div>
+      <div class="highscores-content" style="display: none"></div>
     </main>
 
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>
