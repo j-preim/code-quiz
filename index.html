@@ -7,27 +7,47 @@
     <title>Code Quiz</title>
   </head>
   <body>
-    <header class="info-bar">
+    <div class="info-bar">
       <a class="view-scores" href="index.html">View Highscores</a>
       <div class="timer-text">Time: 0</div>
-    </header>
+    </div>
 
     <main>
-      <div class="main-header">Coding Quiz Challenge</div>
-      <div class="main-content">
-        Try to answer the following code-related questions within the time
-        limit. Keep in mind that incorrect answers will penalize your score/time
-        by ten seconds!
-      </div>
-      <div class="buttons">
+      <header>
+        <div class="main-header">Coding Quiz Challenge</div>
+
+        <div class="quiz-header"></div>
+
+        <div class="enter-score-header" style="display: none">All done!</div>
+      </header>
+
+      <section>
+        <div class="main-content">
+          Try to answer the following code-related questions within the time
+          limit. Keep in mind that incorrect answers will penalize your
+          score/time by ten seconds!
+        </div>
         <button class="start-button">Start Quiz</button>
-      </div>
 
-      <div class="question-header" style="display: none"></div>
-      <div class="question-content" style="display: none"></div>
+        <div class="quiz-content">
+              <button class="answer1"></button>
+              <button class="answer2"></button>
+              <button class="answer3"></button>
+              <button class="answer4"></button>
+          </div>
 
-      <div class="highscores-header" style="display: none">Highscores</div>
-      <div class="highscores-content" style="display: none"></div>
+          <div class="enter-score-content" style="display: none">
+            <div></div>
+            <form>Enter initials: 
+                <input class="initials">
+                <button class="submit-score">Submit</button>
+            </form>
+        </div>
+      </section>
+
+      <footer>
+        <div class="quiz-footer"></div>
+      </footer>
     </main>
 
     <script src="./assets/js/script.js"></script>

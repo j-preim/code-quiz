@@ -31,10 +31,6 @@ main {
     padding: 20px 0;
 }
 
-.buttons {
-    display: block;
-}
-
 button {
     color: white;
     background-color: rgb(92, 24, 129);
@@ -47,11 +43,50 @@ button:hover {
 }
 
 button:active {
-    border: 3px solid skyblue;
+    border: 2px solid skyblue;
+}
+
+.enter-score-header {
+    display: none;
+    text-align: left;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.enter-score-content {
+    display: none;
+    text-align: left;
+    font-size: 90%;
+    padding: 20px 0;
+}
+
+form {
+    padding: 20px 0px;
 }
 
 .highscores-header {
+    display: none;
     text-align: center;
     font-size: 200%;
     font-weight: bold;
+}
+
+.quiz-header {
+    display: none;
+    text-align: left;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.quiz-content {
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.quiz-content button {
+    justify-content: left;
+    text-align: left;
+    width: fit-content;
+    margin: 2px 6px;
 }
