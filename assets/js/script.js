@@ -8,11 +8,13 @@ var answerButtons = quizContent.querySelectorAll("button");
 var enterScoreHeader = document.querySelector(".enter-score-header");
 var enterScoreContent = document.querySelector(".enter-score-content");
 var finalScoreMsg = enterScoreContent.querySelector("div");
-var highScoresHeader = document.querySelector(".highscores-header");
-var highScoresContent = document.querySelector(".highscores-content");
+var highscoresHeader = document.querySelector(".highscores-header");
+var highscoresContent = document.querySelector(".highscores-content");
 var startButton = document.querySelector(".start-button");
 var viewScoresButton = document.querySelector(".view-scores");
 var timerTextEl = document.querySelector(".timer-text");
+var submitScoreButton = document.querySelector(".submit-score");
+var goBackButton = document.querySelector("go-back-button");
 
 var timeLeft = 0;
 var timeInterval;
@@ -182,7 +184,26 @@ function enterInitials() {
   finalScoreMsg.textContent = "Your final score is " + finalScore;
 }
 
-function viewScores() {}
+submitScoreButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  viewScores();
+});
+
+function viewScores() {
+  startButton.setAttribute("style", "display:none;");
+  mainHeader.setAttribute("style", "display:none;");
+  mainContent.setAttribute("style", "display:none;");
+  quizHeader.setAttribute("style", "display:none;");
+  quizContent.setAttribute("style", "display:none;");
+  enterScoreHeader.setAttribute("style", "display:none;");
+  enterScoreContent.setAttribute("style", "display:none;");
+  highscoresHeader.setAttribute("style", "display:block;");
+  highscoresContent.setAttribute("style", "display:block;");
+}
+
+function goBack() {
+    
+}
 
 function countdown() {
   timeLeft = 75;

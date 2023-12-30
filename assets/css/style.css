@@ -71,6 +71,13 @@ form {
     font-weight: bold;
 }
 
+.highscores-content {
+    display: none;
+    text-align: left;
+    font-size: 90%;
+    padding: 20px 0;
+}
+
 .quiz-header {
     display: none;
     text-align: left;
