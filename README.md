@@ -16,6 +16,8 @@ The website will appear as it does in the following screenshot:
 
 ## Credits
 
+https://stackoverflow.com/questions/1129216/sort-array-of-objects-by-string-property-value
+
 
 
 ## License

@@ -4,6 +4,7 @@ var homeHeader = document.querySelector(".home-header");
 var homeContent = document.querySelector(".home-content");
 var quizHeader = document.querySelector(".quiz-header");
 var quizContent = document.querySelector(".quiz-content");
+var quizFooter = document.querySelector(".quiz-footer");
 var answerButtons = quizContent.querySelectorAll("button");
 var enterScoreHeader = document.querySelector(".enter-score-header");
 var enterScoreContent = document.querySelector(".enter-score-content");
@@ -22,6 +23,7 @@ var initialsInput = document.querySelector(".initials");
 var page = "home";
 var timeLeft = 0;
 var timeInterval;
+
 var questionArray = [];
 var choicesArray = [];
 var question1 = "Commonly used data types DO NOT include:";
@@ -125,6 +127,7 @@ startButton.addEventListener("click", function (event) {
   hideHomePage();
   quizHeader.setAttribute("style", "display:block;");
   quizContent.setAttribute("style", "display:flex;");
+  quizFooter.setAttribute("style", "border-top: 2px solid gray;");
   page = "quiz";
   clearInterval(timeInterval);
   nextQuestion();
@@ -169,14 +172,17 @@ function evaluateAnswer() {
 
   if (answerArray[chosenAnswerIndex].correct) {
     score += 10;
+    quizFooter.textContent = "Correct!";
   } else {
     timeLeft = timeLeft - 10;
+    quizFooter.textContent = "Wrong!";
   }
 
   if (questionArray.length === 0) {
     finalScore = score + timeLeft;
     clearInterval(timeInterval);
     enterInitials(finalScore);
+    quizFooter.textContent = "";
   } else {
     nextQuestion();
   }
@@ -213,9 +219,11 @@ submitScoreButton.addEventListener("click", function (event) {
 });
 
 function viewScores() {
+  clearInterval(timeInterval);
   hideHomePage();
   hideQuiz();
   hideEnterScores();
+
   page = "scores";
   highscoresHeader.setAttribute("style", "display:block;");
   highscoresContent.setAttribute("style", "display:block;");
@@ -273,6 +281,7 @@ function hideHomePage() {
 function hideQuiz() {
   quizHeader.setAttribute("style", "display:none;");
   quizContent.setAttribute("style", "display:none;");
+  quizFooter.setAttribute("style", "display:none");
 }
 
 function hideEnterScores() {

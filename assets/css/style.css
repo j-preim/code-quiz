@@ -46,6 +46,34 @@ button:active {
     border: 2px solid skyblue;
 }
 
+.quiz-header {
+    display: none;
+    text-align: left;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.quiz-content {
+    display: none;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.quiz-content button {
+    justify-content: left;
+    text-align: left;
+    width: fit-content;
+    margin: 2px 6px;
+}
+
+.quiz-footer {
+    line-height: 150%;
+    padding-top: 10px;;
+    text-align: left;
+    font-style: italic;
+    color: gray;
+}
+
 .enter-score-header {
     display: none;
     text-align: left;
@@ -90,24 +118,4 @@ form {
     display: list-item;
     text-align: left;
     border-bottom: 1px solid white;
-}
-
-.quiz-header {
-    display: none;
-    text-align: left;
-    font-size: 150%;
-    font-weight: bold;
-}
-
-.quiz-content {
-    display: none;
-    flex-direction: column;
-    padding: 20px 0;
-}
-
-.quiz-content button {
-    justify-content: left;
-    text-align: left;
-    width: fit-content;
-    margin: 2px 6px;
 }
