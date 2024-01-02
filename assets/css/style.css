@@ -20,13 +20,13 @@ main {
     justify-content: center;
 }
 
-.main-header {
+.home-header {
     text-align: center;
     font-size: 200%;
     font-weight: bold;
 }
 
-.main-content {
+.home-content {
     font-size: 90%;
     padding: 20px 0;
 }
@@ -66,16 +66,30 @@ form {
 
 .highscores-header {
     display: none;
-    text-align: center;
+    text-align: left;
     font-size: 200%;
     font-weight: bold;
+    padding-bottom: 10px;
 }
 
 .highscores-content {
     display: none;
     text-align: left;
     font-size: 90%;
-    padding: 20px 0;
+}
+
+.highscores-list {
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+    list-style-position: inside;
+    text-align: left;
+    background-color: rgb(214, 186, 239);
+}
+
+.highscores-list li {
+    display: list-item;
+    text-align: left;
+    border-bottom: 1px solid white;
 }
 
 .quiz-header {
