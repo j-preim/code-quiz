@@ -267,11 +267,7 @@ function renderHighscores() {
 }
 
 backButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  hideHighscores();
-  homeHeader.setAttribute("style", "display:;");
-  homeContent.setAttribute("style", "display:;");
-  startButton.setAttribute("style", "display:;");
+  location.reload();
 });
 
 clearScoresButton.addEventListener("click", function (event) {
