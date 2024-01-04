@@ -24,6 +24,7 @@ var page = "home";
 var timeLeft = 0;
 var timeInterval;
 
+//question and answer data
 var questionArray = [];
 
 var question1 = {
@@ -132,6 +133,7 @@ questionArray.push(question1, question2, question3, question4, question5);
 var score = 0;
 var finalScore = 0;
 
+//start button on home page
 startButton.addEventListener("click", function (event) {
   event.preventDefault();
   hideHomePage();
@@ -144,6 +146,7 @@ startButton.addEventListener("click", function (event) {
   countdown();
 });
 
+//display the next question
 function renderQuestion() {
   var choice1 = {
     text: "1. " + questionArray[0].answer1.text,
@@ -179,6 +182,7 @@ answerButtons.forEach(function (answer) {
   });
 });
 
+//evaluate the user's chosen answer
 function evaluateAnswer(chosenAnswer) {
   if (chosenAnswer.getAttribute("correct") === "true") {
     score += 10;
@@ -193,6 +197,7 @@ function evaluateAnswer(chosenAnswer) {
   nextQuestion();
 }
 
+//decide if there should be another question
 function nextQuestion() {
 if (questionArray.length > 0) {
   renderQuestion();
@@ -204,6 +209,7 @@ else {
 }
 }
 
+//input for the user to enter their initials
 function enterInitials(finalScore) {
   hideQuiz();
   page = "enter";
@@ -222,6 +228,7 @@ if (storedScoreEntries !== null) {
   scoreEntries = storedScoreEntries;
 }
 
+//submit the user's initials and store them in local storage
 submitScoreButton.addEventListener("click", function (event) {
   event.preventDefault();
   scoreEntry = {
@@ -233,6 +240,7 @@ submitScoreButton.addEventListener("click", function (event) {
   viewScores();
 });
 
+//view the highscores
 viewScoresButton.addEventListener("click", function (event) {
   event.preventDefault();
   if (page !== "quiz") {
@@ -266,15 +274,18 @@ function renderHighscores() {
   }
 }
 
+//go back to the main screen
 backButton.addEventListener("click", function (event) {
   location.reload();
 });
 
+//clear highscores from local storage
 clearScoresButton.addEventListener("click", function (event) {
   localStorage.clear();
   highscoresList.innerHTML = "";
 });
 
+//countdown timer for the quiz
 function countdown() {
   timeLeft = 75;
 
@@ -290,6 +301,7 @@ function countdown() {
   }, 1000);
 }
 
+//functions to hide each page
 function hideHomePage() {
   homeHeader.setAttribute("style", "display:none;");
   homeContent.setAttribute("style", "display:none;");
